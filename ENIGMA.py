@@ -38,6 +38,13 @@ def Tia_Francy_Kids(mensagem):
 def IMC_Peso_Ideal(mensagem):
     bot.send_message(mensagem.chat.id, "https://play.google.com/store/apps/details?id=imc.maxwellfreire.aplicativo.br.imc")
 
+@bot.message_handler(commands=["MaxPlay"])
+def MaxPlay(mensagem):
+    bot.send_message(mensagem.chat.id, "https://play.google.com/store/apps/details?id=br.com.well.musicas")
+
+@bot.message_handler(commands=["TimeFly"])
+def TimeFly(mensagem):
+    bot.send_message(mensagem.chat.id, "https://play.google.com/store/apps/details?id=br.com.well.timefly")       
 
     ## Opcção 1.0
     
@@ -47,6 +54,8 @@ def op1(mensagem):
     O que você quer? (Clique em uma opção)
     /Enigma_free
     /Enigma_Pro
+    /MaxPlay
+    /TimeFly
     /Soteador
     /Testa_porta
     /Teste_SMTP
@@ -71,6 +80,10 @@ def op5(mensagem):
 def rsocial(mensagem):
     bot.send_message(mensagem.chat.id,"https://bit.ly/MaxwellPlay")
     
+@bot.message_handler(commands=["Consulta"])
+def Consulta(mensagem):
+    bot.send_message(mensagem.chat.id, "Lista de bot para #consulta de dados: @buscacpfbot @MkBuscaBot @LoPeliosso_bot @ConsultasPlusBot @ArcadianRobot @Skynet02Robot Consulta via Web: https://www.techbusca.org/ Busca por nome de usuário: @maigret_osint_bot Atualizado: 06/10/2022 Canal Telegram: https://t.me/+eQ2Kz6LP_tc1NGYx")
+
     ## Configuração inicial
 
 def verificar(mensagem):
@@ -79,9 +92,10 @@ def verificar(mensagem):
 @bot.message_handler(func=verificar)
 def responder(mensagem):
     texto = """
-   Saiba mais sobre o bot: https://dev--my-project.jetrom.autocode.gg/hello.html 🤖
+   Saiba mais sobre o bot: https://Jetronix.tk/bot 🤖
     Escolha uma opção para continuar (Clique no item):
      /op1 Apps do Max
+     /Consulta
      /op2 Reclamar de um app
      /op3 Baixar papeis de parede Enigma
      /rsocial Redes sociais do Max
